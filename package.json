@@ -8,6 +8,13 @@
     "deep-assign": "^2.0.0",
     "flat": "^2.0.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/callebstrom/express-java-monetary-amount-deserializer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/callebstrom/express-java-monetary-amount-deserializer/issues"
+  },
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.2.0"
@@ -15,6 +22,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "MIT"
+  "author": "callebstrom",
+  "license": "ISC"
 }
