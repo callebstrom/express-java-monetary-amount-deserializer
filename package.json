@@ -16,11 +16,13 @@
     "url": "https://github.com/callebstrom/express-java-monetary-amount-deserializer/issues"
   },
   "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-preset-es2015": "^6.22.0",
     "chai": "^3.5.0",
     "mocha": "^3.2.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test mocha --compilers js:babel-core/register test/*.test.js"
   },
   "author": "callebstrom",
   "license": "ISC"
