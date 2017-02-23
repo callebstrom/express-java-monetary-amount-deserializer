@@ -1,1 +1,1 @@
-module.exports = require('./lib/java-monetary-amount-deserializer')
+module.exports = require('./lib/express-java-monetary-amount-deserializer')
