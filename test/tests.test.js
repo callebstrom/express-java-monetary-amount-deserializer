@@ -18,10 +18,12 @@ describe('Nested tests', function () {
 
     deserialize(request, response, next)
 
-    expect(request.body.goodsList[0].amount.amount).to.equal('100.00')
-    expect(request.body.goodsList[0].amount.currency).to.equal('GBP')
+    expect(request.body.goodsList[0].amount.amount.toFixed(2))
+      .to.equal('100.00')
+    expect(request.body.goodsList[0].amount.currency)
+      .to.equal('GBP')
 
-    expect(request.body.goodsList[1].amount.amount).to.equal('-100.00')
+    expect(request.body.goodsList[1].amount.amount.toFixed(2)).to.equal('-100.00')
     expect(request.body.goodsList[1].amount.currency).to.equal('GBP')
 
     // Test string representation
@@ -45,8 +47,10 @@ describe('Nested tests', function () {
 
     deserialize(request, response, next)
 
-    expect(request.body.computer.components[0].price.amount).to.equal('200.00')
-    expect(request.body.computer.components[1].price.amount).to.equal('300.00')
+    expect(request.body.computer.components[0].price.amount.toFixed(2))
+      .to.equal('200.00')
+    expect(request.body.computer.components[1].price.amount.toFixed(2))
+      .to.equal('300.00')
 
     // Should not corrupt rest of the object
     expect(request.body.computer.components[0].type).to.equal('ram')

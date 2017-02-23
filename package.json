@@ -1,6 +1,6 @@
 {
   "name": "express-java-monetary-amount-deserializer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A express middleware module for deserializing Javas MonetaryAmount object",
   "main": "index.js",
   "dependencies": {
