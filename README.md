@@ -1,6 +1,15 @@
 # express-java-monetary-amount-deserializer
 A express middleware module for deserializing Javas MonetaryAmount object
 
+### Usage
+
+```es6
+import deserializeMonetary from 'express-java-monetary-amount-deserializer'
+let app = express()
+app.use(deserializeMonetary)
+``` 
+
+
 ### Example flat ###
 Input
 ```javascript
