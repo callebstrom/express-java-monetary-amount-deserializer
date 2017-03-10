@@ -60,4 +60,26 @@ describe('Nested tests', function () {
     expect(String(request.body.computer.components[0].price)).to.equal('GBP 200.00')
     expect(String(request.body.computer.components[1].price)).to.equal('GBP 300.00')
   })
+
+  it('should parse arrays as arrays', function () {
+    let request = {
+      body: {
+        computer: {
+          components: [
+            { type: 'ram', brand: 'GoodBrand Inc.', price: 'GBP 200.00' },
+            { type: 'cpu', brand: 'GoodBrand Inc.', price: 'GBP 300.00' }
+          ],
+          sum: 'GBP 500.00'
+        }
+      }
+    }
+    let response = {}
+
+    deserialize(request, response, next)
+    request.body.computer.components.map(function(item) {
+      expect(item.type).to.be.a('string')
+      expect(item.price.amount).to.be.a('number')
+      expect(item.price.currency).to.be.a('string')
+    })
+  })
 })
