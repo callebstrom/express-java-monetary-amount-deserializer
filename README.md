@@ -1,4 +1,7 @@
 # express-java-monetary-amount-deserializer
+
+[![dependencies Status](https://david-dm.org/callebstrom/express-java-monetary-amount-deserializer/status.svg)](https://david-dm.org/callebstrom/express-java-monetary-amount-deserializer)
+
 A express middleware module for deserializing Javas MonetaryAmount object
 
 ### Usage
