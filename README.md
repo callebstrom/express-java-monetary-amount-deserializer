@@ -14,7 +14,7 @@ app.use(deserializeMonetary)
 
 
 ### Example flat ###
-Input
+Input:
 ```javascript
 {
   sum: "GBP 100.00"
@@ -32,7 +32,7 @@ Output:
 ```
 
 ### Example nested ###
-Input
+Input:
 ```javascript
 {
   goods_list: [
